@@ -18,11 +18,11 @@ class Board:
         """ Функция размещает ход на доске"""
         self.board[row][col] = player
 
-    def display(self):
-        """Функция отображает игровое поле"""
-        for row in self.board:
-            print('|'.join(row))
-            print('-' * 5)
+    # def display(self):
+    #     """Функция отображает игровое поле, функция для консольной игры"""
+    #     for row in self.board:
+    #         print('|'.join(row))
+    #         print('-' * 5)
     
     def is_board_full(self) -> bool:
         """ Проверка циклом, если ли у нас пустые клетки"""
@@ -45,3 +45,7 @@ class Board:
                 or self.board[0][2] == self.board[1][1] == self.board[2][0] == player):
             return True
         return False
+
+    def write_results(self, string: str):
+        with open("results.txt", 'a') as data:
+            data.write(string + '\n')
