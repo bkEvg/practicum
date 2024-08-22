@@ -1,2 +1,2 @@
-# practicum
-Projects from school named as "Practicum"
+# TicTacToe project
+game tic tac toe mad with python
